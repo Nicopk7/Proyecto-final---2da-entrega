@@ -113,7 +113,6 @@ exports.updateUser = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // si se proporciona una nueva contraseña, encripta y actualiza la contraseña
     if (password) {
       const passwordHash = await bcrypt.hash(password, 10);
       user.password = passwordHash;

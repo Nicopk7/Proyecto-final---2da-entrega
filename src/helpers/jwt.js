@@ -3,7 +3,7 @@ const dtenv = require("dotenv").config();
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-// genera un token JWT a partir de un payload
+
 
 async function generateJWT(payload) {
   return new Promise((resolve, reject) => {

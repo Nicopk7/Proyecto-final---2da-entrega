@@ -3,9 +3,9 @@ const dtenv = require("dotenv").config();
 const User = require("../models/userModel.js");
 const Role = require("../models/roleModel.js");
 
-const SECRET_KEY = process.env.SECRET_KEY; // clave para firmar y verificar los tokens desde las variables de entorno
+const SECRET_KEY = process.env.SECRET_KEY; 
 
-// middleware para verificar la autenticación del usuario
+
 exports.authRequired = async (req, res, next) => {
   const { token } = req.cookies;
 
@@ -17,10 +17,10 @@ exports.authRequired = async (req, res, next) => {
   const user = await User.findById(req.userId, { password: 0 }); // Buscamos al usuario en la base de datos excluyendo la contraseña
   if (!user) return res.status(404).json({ message: "No user found" });
 
-  next(); // continua con la ejecución del siguiente middleware
+  next(); 
 };
 
-// middleware para verificar si el usuario es administrador
+
 exports.isAdmin = async (req, res, next) => {
   const user = await User.findById(req.userId);
   console.log(user);

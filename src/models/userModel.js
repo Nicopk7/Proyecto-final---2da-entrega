@@ -2,21 +2,21 @@ const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
-    //Campo para usuario
+    
     username: {
       type: String,
       required: true,
-      trim: true, // borra los espacios entre el string
+      trim: true, 
     },
 
-    //Campo para email
+    
     email: {
       type: String,
       required: true,
       trim: true,
-      unique: true, // El email es unico
+      unique: true, 
     },
-    //Campo para contrasenia
+    
     password: {
       type: String,
       required: true,
@@ -24,13 +24,13 @@ const userSchema = new Schema(
     },
     roles: [
       {
-        ref: "Role", // Indicamos los roles
+        ref: "Role", 
         type: Schema.Types.ObjectId,
       },
     ],
   },
   {
-    timestamps: true, // Agrega campos de fecha 'createdAt' y 'updatedAt'
+    timestamps: true, 
     versionKey: false,
   }
 );
