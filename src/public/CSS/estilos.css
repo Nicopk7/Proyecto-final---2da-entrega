@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hiden;
+}
+
+.main{
+    width: 100;
+}
+
+/* SECCIÓN 1 */
+
+#container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Assets/Fotos/Fondo.jpg);
+    background-position: center;
+}
+
+.header1{
+    background-color: black;
+    background: linear-gradient(180deg, rgba(0,0,0), rgba(0,0,0,0));
+    width: 100%;
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+}
+
+.nombrePagina{
+    color: gold;
+    width: 20%;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 100px;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 100px;
+}
+
+.links{
+    color: gold;
+    padding: 70px 30px;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.links:hover{
+    background-color: firebrick;
+    color: #fff;
+}
+
+.bannerHeader{
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: gold;
+}
+
+.textoBanner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+
+.textoBanner h1{
+    font-size: 100px;
+}
+
+.textoBanner p{
+    font-size: 36px;
+    margin: 20px 0 75px 0;
+}
+
+.textoBanner a{
+    color: black;
+    background-color: gold;
+    padding: 20px 0;
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.textoBanner a:hover{
+    color: black;
+    background-color: firebrick;
+}
+
+/* SECCIÓN 2 */
+
+#container2{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.712), rgb(0, 0, 0)), url(../Assets/Fotos/Fondo\ 2.jpg); 
+    background-position: center;
+    padding: 50px 0;
+}
+
+.textoAutoresML{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.textoAutoresML h2{
+    color: gold;
+    font-size: 50px;
+}
+
+.textoAutoresML p{
+    color: firebrick;
+    margin: 39px;
+    font-size: 24px;
+}
+
+.fotosAutoresML{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen img{
+    border-radius: 15px;
+}
+
+.imagen a{
+    margin: 10px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: gold;
+}
+
+.imagen p{
+    font-size: 18px;
+    color: firebrick;
+}
+
+/* SECCIÓN 3 */
+
+#container3{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: firebrick;
+    padding: 50px 0;
+    color: gold;
+}
+
+.imgCatalogo{
+    width: 35%;
+}
+
+.textoCatalogo{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textoCatalogo h2{
+    font-size: 48px;
+    text-align: center;
+}
+
+.textoCatalogo p{
+    font-size: 24px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.textoCatalogo a{
+    background-color: gold;
+    color: black;
+    border-radius: 25px;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+.textoCatalogo a:hover{
+    background-color: black;
+    color: gold;
+    transition: 0.2s;
+}
+
+/* SECCIÓN 4 */
+
+#container4{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: gold;
+    padding: 50px 0;
+    color: firebrick;
+}
+
+.texto100{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto100 h2{
+    font-size: 48px;
+    text-align: center;
+}
+
+.texto100 p{
+    font-size: 24px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.texto100 a{
+    background-color: firebrick;
+    color: black;
+    border-radius: 25px;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+.texto100 a:hover{
+    background-color: black;
+    color: firebrick;
+    transition: 0.2s;
+}
+
+.img100{
+    width: 35%;
+    padding-left: 50px;
+}
+
+/* SECCIÓN 5 */
+
+#container5{
+    background-color: black;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.textoFooter{
+    width: 90%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#caja1{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 25px;
+}
+
+#caja1, #caja2 h3{
+    margin-top: 40px;
+}
+
+#redes{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+#redes img{
+    object-fit: cover;
+    height: 75%;
+    margin-right: 15px;
+}
+
+#caja2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+}
+
+/* formulario */
+
+#bodyForm{
+    background-color: firebrick;
+    display: flex;
+}
+
+.Formulario{
+    background-color: #fff;
+    border-radius: 15px;
+    width: 25%;
+    height: auto;
+    border: 2px solid #fff;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.input-box{
+    margin: 10px;
+    padding: 10px;
+}
+
+input, textarea{
+    border-radius: 4px;
+    border-color:  rgb(38, 116, 168);
+    border-width: 1.5px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#tituloForm{
+    margin: 10px;
+    margin-top: 30px;
+    color: black;
+    text-align: center;
+}
+
+.Formulario p{
+    text-align: center;
+    margin: 10px;
+} 
+
+.button-container {
+    text-align: center;
+    margin-left: 1cqmax;
+    margin-right: 30px;
+} 
+
+button{
+    border: none;
+    background: firebrick;
+    border-radius: 15px;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.required {
+    color: firebrick;
+}
+
+button:hover{
+    background-color: gold;
+    color: firebrick;
+    transition: 0.2s;
+}
+
+#botonModal{
+    border: none;
+    background: firebrick;
+    border-radius: 15px;
+    width: 100%;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+}
+
+#botonModal.required {
+    color: firebrick;
+}
+
+#botonModal:hover{
+    background-color: gold;
+    color: firebrick;
+    transition: 0.2s;
+}
+
+/* Catálogo */
+
+#containerCatalogo{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.712), rgb(0, 0, 0) ), url(../Assets/Fotos/FondoCatalogo.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+}
+
+.header2{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+}
+
+.header2 .links:hover{
+    background-color: firebrick;
+    color: black;
+}
+
+#containerArt{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 350px;
+    height: 350px;
+    border: solid 1px firebrick;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.imagenSupuesta{
+    background-color: lightgray;
+    width: 50%;
+    height: 350px;
+    margin-top: 15px;
+}
+
+/* 100 Más leídos */
+
+#containerMasLeidos{
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.712), rgb(0, 0, 0) ), url(../Assets/Fotos/FondoMasLeídos.jpg);
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    background-color: black;
+}
+
+.formContainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200vh;
+}
+
+
+#login{
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 300px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bodyLogin{
+    background-image: url(../Assets/Fotos/Fondo.jpg);
+}

@@ -1,11 +1,36 @@
+/*const mongoose = require("mongoose");
+require("dotenv").config();
+
+const DB_HOST = process.env.DB_HOST;
+const ATLAS_DB = process.env.ATLAS_DB;
+
+const connectDB = mongoose
+  .connect(ATLAS_DB, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("DB Conected");
+  })
+  .catch((err) => console.log(err));
+
+module.exports = connectDB; */
+
 const mongoose = require("mongoose");
+require("dotenv").config();
 
+const ATLAS_DB = process.env.ATLAS_DB;
 
-exports.connectDB = async () => {
+const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost:27017");
-    console.log("+++++++++ BASE DE DATOS CONECTADA +++++++++");
+    await mongoose.connect(ATLAS_DB, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("DB Connected");
   } catch (error) {
-    console.log(error);
+    console.error("Error connecting to the database:", error.message);
   }
 };
+
+module.exports = connectDB;

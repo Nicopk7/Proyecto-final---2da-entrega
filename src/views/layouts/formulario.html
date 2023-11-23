@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/estilos.css"> 
+    <title>Formulario</title>
+</head>
+
+<body id="bodyForm">
+    <div class="Formulario">
+        <form action="register" method="post">
+            
+            <h1 id="tituloForm">¡Suscribete!</h1>
+            <p>¡Al suscribirte, te enviaremos ofertas exclusivas de acuerdo a tus preferencias!</p>
+            <p>¡Es totalmente gratis!</p>
+
+            <div class="input-box">
+                <label for="nombre">Nombre <span class="required">*</span> </label>
+                <input type="text" required placeholder="Escribe tu nombre">
+            </div>
+
+            <div class="input-box">
+                <label for="email">Email <span class="required">*</span> </label>
+                <input type="email" required placeholder="Indícanos tu email">
+            </div>
+
+            <div class="input-box">
+                <label for="telefono">Telefono</label>
+                <input type="text" placeholder="Indícanos tu teléfono">
+            </div>
+
+            <!-- <div class="input-box">
+                <input type="checkbox">Fantasía</input>
+                <input type="checkbox">Terror</input>
+                <input type="checkbox">Ciencia Ficción</input>
+                <input type="checkbox">No Ficción</input>
+                <input type="checkbox">Dramas juveniles</input>
+            </div> -->
+
+            <div class="input-box">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="¡Coméntanos si quieres que te avisemos cuando ingrese un libro en particular!"></textarea>
+            </div>
+            
+            <div class="button-container">
+                <button type="submit">Suscribirme</button>
+            </div>
+
+            <p> Los campos con * son obligatorios.</p>
+        </form>
+        
+    </div>
+</body>
+
+</html>
