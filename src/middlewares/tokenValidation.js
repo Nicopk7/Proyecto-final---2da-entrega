@@ -9,7 +9,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 exports.authRequired = async (req, res, next) => {
   const { token } = req.cookies;
 
-  if (!token) return res.status(401).json({ message: "no token provided" });
+  if (!token) return res.redirect("/login");//res.status(401).json({ message: "no token provided" });
 
   const decoded = jwt.verify(token, SECRET_KEY);
   req.userId = decoded.id;

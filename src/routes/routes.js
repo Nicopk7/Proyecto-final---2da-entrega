@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const router = Router();
+const { authRequired, isAdmin } = require("../middlewares/tokenValidation.js");
 const path = require("path");
 
 //home
@@ -9,14 +10,14 @@ router.get("/", (req,res)=>{
 })
 
 //catalogo
-router.get("/catalogo", (req,res) => {
+router.get("/catalogo", authRequired, (req,res) => {
   const filePath = path.join(__dirname, "..", "views", "layouts", "catalogo.html");
   res.sendFile(filePath);
 })
 
 //mas leidos
 
-router.get("/mas_leidos", (req,res) => {
+router.get("/mas_leidos",authRequired, (req,res) => {
   const filePath = path.join(__dirname, "..", "views", "layouts", "mas_leidos.html");
   res.sendFile(filePath);
 })
@@ -38,7 +39,8 @@ router.get("/login", (req, res) => {
 //register
 
 router.get("/register", (req,res) => {
-  const filePath = path.join(__dirname, "..", "views", "layouts", "register.html");
+
+ const filePath = path.join(__dirname, "..", "views", "layouts", "register.html");
   res.sendFile(filePath);
 })
 

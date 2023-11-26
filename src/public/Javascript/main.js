@@ -25,3 +25,65 @@
         codigoContainer.appendChild(codigoParrafo);
     }
 
+
+    async function registerUser() {
+        const emailInput = document.getElementById("email");
+        const emailError = document.getElementById("emailError");
+      
+        emailError.textContent = "";
+      
+        try {
+          const response = await fetch("/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              username: document.getElementById("username").value,
+              email: emailInput.value,
+              password: document.getElementById("password").value,
+            }),
+          });
+      
+          const data = await response.json();
+      
+          if (!response.ok) {
+            emailError.textContent = data.message;
+          } else {
+            console.log("Usuario registrado con éxito");
+            window.location.href = data.redirectUrl;
+          }
+        } catch (error) {
+          console.error("Error al realizar la solicitud:", error);
+        }
+      }
+      
+    
+      async function login() {
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+      
+        try {
+          const response = await fetch("/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: emailInput.value,
+              password: passwordInput.value,
+            }),
+          });
+      
+          const data = await response.json();
+      
+          if (!response.ok) {
+            console.error(data.message);
+          } else {
+            console.log("Inicio de sesión exitoso");
+            window.location.href = data.redirectUrl;
+          }
+        } catch (error) {
+          console.error("Error al realizar la solicitud:", error);
+        }
+      }

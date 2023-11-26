@@ -17,7 +17,8 @@ const app = express();
     app.use(express.json());
     app.use(cookieParser());
   
-    app.use("/api", authRoutes);
+    //app.use("/api", authRoutes);
+    app.use(authRoutes)
     app.use(routes);
   
     app.use(express.static(path.join(__dirname, "public")));

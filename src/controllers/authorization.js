@@ -16,6 +16,8 @@ exports.register = async (req, res) => {
       password: passwordHash,
     });
 
+    
+
     if (roles) {
       const foundRoles = await Role.find({ name: { $in: roles } });
       newUser.roles = foundRoles.map((role) => role._id);
@@ -29,12 +31,7 @@ exports.register = async (req, res) => {
     res.cookie("token", token);
 
     res.json({
-      id: userSaved._id,
-      username: userSaved.username,
-      email: userSaved.email,
-      roles: userSaved.roles,
-      createdAt: userSaved.createdAt,
-      updatedAt: userSaved.updatedAt,
+      redirectUrl: "/catalogo",
     });
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -65,11 +62,7 @@ exports.login = async (req, res) => {
     res.cookie("token", token);
 
     res.json({
-      id: userFound._id,
-      username: userFound.username,
-      email: userFound.email,
-      createdAt: userFound.createdAt,
-      updatedAt: userFound.updatedAt,
+      redirectUrl: "/catalogo"
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

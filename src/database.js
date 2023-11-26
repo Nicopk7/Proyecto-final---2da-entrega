@@ -20,6 +20,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const ATLAS_DB = process.env.ATLAS_DB;
+const DB_HOST = process.env.DB_HOST;
 
 const connectDB = async () => {
   try {
@@ -34,3 +35,6 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
+
+
+
